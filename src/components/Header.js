@@ -1,7 +1,13 @@
+import image from "../images/TrollFace.png"
+
 const Header = () => {
   return (
-    <div className="header"></div>
-  )
+		<header>
+			<img src={image} alt="" />
+			<h1>Meme Generator</h1>
+			<h4>React Course - Project 3</h4>
+		</header>
+	);
 }
 
 export default Header
