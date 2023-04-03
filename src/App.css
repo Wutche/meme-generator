@@ -11,23 +11,63 @@ header {
 	align-items: center;
 	height: 65px;
 	background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
-  padding: 20px 4%;
-  color: white;
+	padding: 20px 4%;
+	color: white;
 }
 
 header > img {
 	height: 26.2px;
 	width: 31.3px;
-  margin-right: 6px;
+	margin-right: 6px;
 }
 
 header > h1 {
-  font-size: 20px;
-  margin-right: auto;
+	font-size: 20px;
+	margin-right: auto;
 }
 
 header > h4 {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 14.52px;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 14.52px;
+}
+
+main {
+	padding: 36px;
+}
+
+.form {
+	display: grid;
+	grid-template: 40px 40px / 1fr 1fr;
+	gap: 17px;
+}
+
+.form > button {
+	grid-column: 1 / -1;
+	font-family: sans-serif;
+	border-radius: 5px;
+	height: 45px;
+	cursor: pointer;
+	background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+	color: white;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 19px;
+	/* letter-spacing: -0.1em; */
+	text-align: center;
+	border: none;
+}
+
+.form > input {
+	font-family: sans-serif;
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid #d5d4d8;
+	text-indent: 10px;
+}
+
+.meme--image {
+
+	max-width: 100%;
+	margin-top: 50px;
 }
