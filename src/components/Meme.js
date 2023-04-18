@@ -6,8 +6,8 @@ import memesdata from "./memesdata";
 const Meme = () => {
 	// const [memeImage, setMemeImage] = useState("");
 	const [meme, setMeme] = useState({
-		toptext: "",
-		bottomtext: "",
+		topText: "",
+		bottomText: "",
 		randomimage:
 			"https://i.pinimg.com/736x/46/2f/af/462fafbf63e981c2cc4bd699da32bab6.jpg",
 	});
@@ -24,39 +24,40 @@ const Meme = () => {
 		}));
 	}
 
-	const handleChange = (event) => {
-		const [name, value] = event.target
-		setAllMemeData(prevMemeData => {
-			return {
-				...prevMemeData,
-				[name]: value
-			}
-		})
-	};
+	function handleForm(event) {
+		const { name, value } = event.target;
+		setMeme((prevMemeInput) => ({
+			...prevMemeInput,
+			[name]: value,
+		}));
+	}
 
 	return (
 		<main>
-			<div className="form">
+			<form>
 				<input
+					onChange={handleForm}
+					value={meme.topText}
+					name="topText"
 					type="text"
-					onChange={handleChange}
-					value={meme.toptext}
-					name="toptext"
 					placeholder="Top Text"
+					className="topinput"
 				/>
 				<input
+					onChange={handleForm}
+					value={meme.bottomText}
+					name="bottomText"
 					type="text"
-					onChange={handleChange}
-					value={meme.bottomtext}
-					name="bottomtext"
 					placeholder="Bottom Text"
+					className="bottominput"
 				/>
 				<button onClick={generateImage}>Get a new meme image 🖼</button>
-			</div>
+			</form>
+
 			<div className="meme">
 				<img src={meme.randomimage} className="meme--image" alt="" />
-				<h2 className="meme--text top">One does not simply</h2>
-				<h2 className="meme--text bottom">Walk into Mordor</h2>
+				<h2 className="meme--text top">{meme.topText}</h2>
+				<h2 className="meme--text bottom">{meme.bottomText}</h2>
 			</div>
 		</main>
 	);
