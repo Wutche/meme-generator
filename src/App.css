@@ -44,11 +44,12 @@ form {
 	gap: 17px;
 }
 
-form > button {
+.main button {
 	grid-column: 1 / -1;
 	font-family: sans-serif;
 	border-radius: 5px;
 	height: 45px;
+	width: 100%;
 	cursor: pointer;
 	background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
 	color: white;
@@ -86,7 +87,7 @@ form > input {
 }
 
 .meme--text {
-	color: white;
+	color: black;
 	font-weight: 900;
 	font-size: 4rem;
 	text-align: center;
